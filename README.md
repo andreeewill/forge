@@ -1,11 +1,21 @@
 # Forge
 
-[![NPM](https://nodei.co/npm/node-forge.svg?data=d)](https://nodei.co/npm/node-forge/)
-
-[![Main Checks](https://github.com/digitalbazaar/forge/actions/workflows/main.yaml/badge.svg)](https://github.com/digitalbazaar/forge/actions/workflows/main.yaml)
+[![NPM](https://img.shields.io/npm/v/@andreeewill/node-forge.svg)](https://www.npmjs.com/package/@andreeewill/node-forge)
 
 A native implementation of [TLS][] (and various other cryptographic tools) in
 [JavaScript][].
+
+> **Fork notice**
+>
+> This is an independent fork of [node-forge][] by Digital Bazaar, Inc.,
+> published to npm as [`@andreeewill/node-forge`][pkg]. It is **not**
+> affiliated with, endorsed by, or supported by Digital Bazaar, Inc.
+>
+> Fork version 2.0.0 is functionally identical to upstream `1.4.1-0`; only the
+> package name and metadata differ. Report issues with this fork to
+> [its own issue tracker][issues], not to upstream.
+>
+> Licensing is unchanged: `(BSD-3-Clause OR GPL-2.0)`. See [LICENSE](./LICENSE).
 
 Introduction
 ------------
@@ -105,16 +115,16 @@ not be regularly updated.
 
 If you want to use forge with [Node.js][], it is available through `npm`:
 
-https://www.npmjs.com/package/node-forge
+https://www.npmjs.com/package/@andreeewill/node-forge
 
 Installation:
 
-    npm install node-forge
+    npm install @andreeewill/node-forge
 
 You can then use forge as a regular module:
 
 ```js
-var forge = require('node-forge');
+var forge = require('@andreeewill/node-forge');
 ```
 
 The npm package includes pre-built `forge.min.js`, `forge.all.min.js`, and
@@ -122,10 +132,10 @@ The npm package includes pre-built `forge.min.js`, `forge.all.min.js`, and
 
 ### jsDelivr CDN
 
-To use it via [jsDelivr](https://www.jsdelivr.com/package/npm/node-forge) include this in your html:
+To use it via [jsDelivr](https://www.jsdelivr.com/package/npm/@andreeewill/node-forge) include this in your html:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/node-forge@1.0.0/dist/forge.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@andreeewill/node-forge@2.0.0/dist/forge.min.js"></script>
 ```
 
 ### unpkg CDN
@@ -133,7 +143,7 @@ To use it via [jsDelivr](https://www.jsdelivr.com/package/npm/node-forge) includ
 To use it via [unpkg](https://unpkg.com/#/) include this in your html:
 
 ```html
-<script src="https://unpkg.com/node-forge@1.0.0/dist/forge.min.js"></script>
+<script src="https://unpkg.com/@andreeewill/node-forge@2.0.0/dist/forge.min.js"></script>
 ```
 
 ### Development Requirements
@@ -302,7 +312,7 @@ forge.options.usePureJavaScript = true;
 To disable native code when using Node.js:
 
 ```js
-var forge = require('node-forge');
+var forge = require('@andreeewill/node-forge');
 forge.options.usePureJavaScript = true;
 ```
 
@@ -728,7 +738,7 @@ if(pass) {
 Using forge in Node.js to match openssl's "enc" command line tool (**Note**: OpenSSL "enc" uses a non-standard file format with a custom key derivation function and a fixed iteration count of 1, which some consider less secure than alternatives such as [OpenPGP](https://tools.ietf.org/html/rfc4880)/[GnuPG](https://www.gnupg.org/)):
 
 ```js
-var forge = require('node-forge');
+var forge = require('@andreeewill/node-forge');
 var fs = require('fs');
 
 // openssl enc -des3 -in input.txt -out input.enc
@@ -2069,3 +2079,7 @@ Financial support is welcome and helps contribute to further development:
 [unpkg]: https://unpkg.com/
 [webpack]: https://webpack.github.io/
 [TweetNaCl.js]: https://github.com/dchest/tweetnacl-js
+
+[node-forge]: https://github.com/digitalbazaar/forge
+[pkg]: https://www.npmjs.com/package/@andreeewill/node-forge
+[issues]: https://github.com/andreeewill/forge/issues

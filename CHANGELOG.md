@@ -1,6 +1,25 @@
 Forge ChangeLog
 ===============
 
+## 2.0.0 - 2026-09-09
+
+### Changed
+- **BREAKING**: Package renamed to `@andreeewill/node-forge`. This is an
+  independent fork of [node-forge](https://github.com/digitalbazaar/forge) by
+  Digital Bazaar, Inc., published from
+  https://github.com/andreeewill/forge. It is not affiliated with or endorsed
+  by Digital Bazaar, Inc. Update imports:
+  `require('node-forge')` -> `require('@andreeewill/node-forge')`.
+- Package metadata (`homepage`, `repository`, `bugs`, `author`) now points at
+  the fork. Original authors are retained under `contributors`.
+- Replaced the deprecated `prepublish` script with `prepack` so the browser
+  bundles in `dist/` are actually built into the published tarball. Under npm
+  7+, `prepublish` no longer runs on `npm publish`.
+
+### Notes
+- No changes to library code. The API is identical to upstream 1.4.1-0.
+- Licensing is unchanged: `(BSD-3-Clause OR GPL-2.0)`. See LICENSE.
+
 ## 1.4.0 - 2026-03-24
 
 ### Security

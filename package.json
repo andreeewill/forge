@@ -1,14 +1,15 @@
 {
-  "name": "node-forge",
-  "version": "1.4.1-0",
-  "description": "JavaScript implementations of network transports, cryptography, ciphers, PKI, message digests, and various utilities.",
-  "homepage": "https://github.com/digitalbazaar/forge",
+  "name": "@andreeewill/node-forge",
+  "version": "2.0.0",
+  "description": "JavaScript implementations of network transports, cryptography, ciphers, PKI, message digests, and various utilities. Fork of node-forge by Digital Bazaar, Inc.",
+  "homepage": "https://github.com/andreeewill/forge",
   "author": {
-    "name": "Digital Bazaar, Inc.",
-    "email": "support@digitalbazaar.com",
-    "url": "http://digitalbazaar.com/"
+    "name": "andreeewill",
+    "email": "andre.williamyuw@gmail.com",
+    "url": "https://github.com/andreeewill"
   },
   "contributors": [
+    "Digital Bazaar, Inc. <support@digitalbazaar.com> (original author)",
     "Dave Longley <dlongley@digitalbazaar.com>",
     "David I. Lehn <dlehn@digitalbazaar.com>",
     "Stefan Siegl <stesie@brokenpipe.de>",
@@ -45,11 +46,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/forge"
+    "url": "git+https://github.com/andreeewill/forge.git"
   },
   "bugs": {
-    "url": "https://github.com/digitalbazaar/forge/issues",
-    "email": "support@digitalbazaar.com"
+    "url": "https://github.com/andreeewill/forge/issues"
   },
   "license": "(BSD-3-Clause OR GPL-2.0)",
   "main": "lib/index.js",
@@ -92,7 +92,7 @@
     "x509"
   ],
   "scripts": {
-    "prepublish": "npm run build",
+    "prepack": "npm run build",
     "build": "webpack",
     "test-build": "webpack --config webpack-tests.config.js",
     "test": "npm run test-node",
@@ -119,5 +119,8 @@
     "buffer": false,
     "crypto": false,
     "process": false
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
